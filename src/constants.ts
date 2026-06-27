@@ -67,7 +67,7 @@ export const DEVELOPER_INFO = {
       ],
       techStack: ["React", "TypeScript", "Tesseract.js", "Gemini Pro Vision", "Tailwind CSS"],
       badge: "Best Innovative Solution",
-      github: "https://github.com/Jinsiya/APOIES-",
+      github: "https://github.com/Jinsiya/APOIES.git",
     },
     {
       id: "smartex",
