@@ -17,8 +17,13 @@
     @apply transition-colors duration-500 bg-[#F2EDC2] text-[#346739];
   }
 
+  @media (min-width: 768px) {
+    * {
+      cursor: none !important;
+    }
+  }
+
   * {
-    cursor: none !important;
     @apply selection:bg-[#346739]/30 selection:text-[#346739];
   }
 

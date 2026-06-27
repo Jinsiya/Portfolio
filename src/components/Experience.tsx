@@ -9,13 +9,13 @@ import { DEVELOPER_INFO } from "../constants";
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-32 px-6 max-w-5xl mx-auto">
-      <div className="text-center mb-24 relative z-[60]">
+    <section id="experience" className="py-16 sm:py-32 px-4 sm:px-6 max-w-5xl mx-auto">
+      <div className="text-center mb-16 sm:mb-24 relative z-[60]">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-5xl md:text-7xl font-display font-black mb-6 tracking-normal uppercase leading-tight relative z-[70] px-16 py-8 overflow-visible"
+          className="text-4xl sm:text-5xl md:text-7xl font-display font-black mb-4 sm:mb-6 tracking-normal uppercase leading-tight relative z-[70] px-4 sm:px-16 py-4 sm:py-8 overflow-visible"
         >
           My <span className="gradient-text italic filter drop-shadow-[0_8px_30px_rgba(52,103,57,0.2)]">Journey</span>
         </motion.h2>
@@ -47,8 +47,8 @@ export default function Experience() {
 
             {/* Content Card */}
             <div className={`w-full md:w-[45%] ${index % 2 === 0 ? "md:pl-0" : "md:pr-0"}`}>
-              <div className="glass shine-effect p-12 rounded-[3.5rem] group relative overflow-hidden border border-[#9FCB98]/30 hover:border-[#346739]/30 transition-all duration-500 bg-white/40 dark:bg-[#1A1F24]/40 soft-glow">
-                <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity text-[#346739]">
+              <div className="glass shine-effect p-6 sm:p-12 rounded-[2rem] sm:rounded-[3.5rem] group relative overflow-hidden border border-[#9FCB98]/30 hover:border-[#346739]/30 transition-all duration-500 bg-white/40 dark:bg-[#1A1F24]/40 soft-glow">
+                <div className="absolute top-0 right-0 p-4 sm:p-8 opacity-5 group-hover:opacity-10 transition-opacity text-[#346739]">
                   <Briefcase size={80} strokeWidth={1} />
                 </div>
                 

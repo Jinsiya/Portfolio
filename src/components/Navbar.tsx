@@ -41,13 +41,13 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-1/2 -translate-x-1/2 z-[40] mt-8 transition-all duration-500 ${isScrolled ? "scale-95 opacity-90" : "scale-100 opacity-100"}`}>
-      <div className="glass px-10 py-5 rounded-[2.5rem] flex items-center gap-10 border border-[#9FCB98]/30 bg-white/40 soft-glow">
+    <nav className={`fixed top-0 left-1/2 -translate-x-1/2 z-[40] mt-4 sm:mt-8 transition-all duration-500 ${isScrolled ? "scale-95 opacity-90" : "scale-100 opacity-100"} max-w-[95vw] sm:max-w-none`}>
+      <div className="glass px-4 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 rounded-full sm:rounded-[2.5rem] flex items-center justify-center gap-3.5 sm:gap-6 md:gap-10 border border-[#9FCB98]/30 bg-white/40 soft-glow overflow-x-auto no-scrollbar">
         {navItems.map((item) => (
           <a
             key={item.id}
             href={`#${item.id}`}
-            className={`relative text-[11px] font-bold uppercase tracking-[0.2em] transition-all hover:scale-105 ${
+            className={`relative text-[9px] sm:text-[10px] md:text-[11px] font-bold uppercase tracking-[0.1em] sm:tracking-[0.15em] md:tracking-[0.2em] transition-all hover:scale-105 flex-shrink-0 ${
               activeSection === item.id ? "text-[#346739]" : "text-black hover:text-[#346739]"
             } hover-trigger`}
           >

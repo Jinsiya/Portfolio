@@ -25,11 +25,11 @@ export default function Hero() {
         transition={{ duration: 0.8 }}
         className="text-center z-10"
       >
-        <h1 className="text-6xl md:text-9xl font-display font-black mb-6 tracking-normal leading-[0.85] uppercase relative z-[70] px-12 py-4 overflow-visible">
+        <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-display font-black mb-6 tracking-normal leading-[0.85] uppercase relative z-[70] px-4 sm:px-12 py-2 sm:py-4 overflow-visible">
           I'm <span className="gradient-text filter drop-shadow-[0_8px_30px_rgba(52,103,57,0.2)]">Jinsiya A</span>
         </h1>
 
-        <div className="h-12 md:h-16 flex items-center justify-center overflow-hidden">
+        <div className="h-10 sm:h-12 md:h-16 flex items-center justify-center overflow-hidden">
           <AnimatePresence mode="wait">
             <motion.p
               key={index}
@@ -37,7 +37,7 @@ export default function Hero() {
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: -20, opacity: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-xl md:text-4xl font-display font-bold text-[#346739] uppercase tracking-tight"
+              className="text-lg sm:text-2xl md:text-4xl font-display font-bold text-[#346739] uppercase tracking-tight"
             >
               {DEVELOPER_INFO.typewriter[index]}
             </motion.p>
