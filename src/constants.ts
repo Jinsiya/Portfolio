@@ -132,28 +132,6 @@ export const DEVELOPER_INFO = {
       techStack: ["Python", "OpenCV", "Flask", "YOLOv8", "SORT Algorithm", "JavaScript"],
       badge: "Computer Vision",
       github: "https://github.com/Jinsiya/CodeAlpha_Object--detection-and-tracking",
-    },
-    {
-      id: "smartex",
-      title: "SmartEx AU",
-      featured: false,
-      aim: "Next-generation academic copilot for Anna University (AU) students.",
-      idea: "SmartEx AU is a comprehensive RAG-based (Retrieval-Augmented Generation) educational platform that provides curriculum-aligned resources and an AI tutor trained on official syllabi and previous year question patterns.",
-      working: [
-        "Curriculum Mapping: Intelligent organization of resources by regulation, department, and semester.",
-        "RAG Chatbot: Custom-tuned AI that searches specifically within provided university notes to prevent hallucinations.",
-        "Exam Prediction: Analyzes historical question frequency to highlight high-priority topics.",
-        "Automated Summarization: Condenses large chapters into bulleted study guides for quick revision.",
-        "Multi-Mark Generation: AI provides structured answers specifically formatted for 2/5/13 mark AU exam standards."
-      ],
-      techStack: ["React", "PostgreSQL", "Node.js", "OpenAI (v4)", "LangChain", "RAG Architecture"],
-      features: [
-        "Regulation-specific content",
-        "Context-aware AI Tutoring",
-        "Dark-mode optimized study UI",
-        "Semantic Search for Syllabus"
-      ],
-      github: "https://github.com/Jinsiya/smartex-au",
     }
   ],
   skills: {
