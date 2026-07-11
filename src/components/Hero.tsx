@@ -57,8 +57,8 @@ export default function Hero() {
 
       {/* Hero Local Background Elements */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[#79AE6F]/10 rounded-full blur-[150px] -z-20 pointer-events-none" />
-      <div className="absolute top-1/4 right-1/4 w-[400px] h-[400px] bg-[#346739]/10 rounded-full blur-[100px] -z-20 pointer-events-none" />
-      <div className="absolute bottom-1/4 left-1/4 w-[400px] h-[400px] bg-[#9FCB98]/10 rounded-full blur-[100px] -z-20 pointer-events-none" />
+      <div className="absolute top-1/4 right-1/4 w-[400px] h-[400px] bg-[#346739]/5 rounded-full blur-[100px] -z-20 pointer-events-none" />
+      <div className="absolute bottom-1/4 left-1/4 w-[400px] h-[400px] bg-[#9FCB98]/5 rounded-full blur-[100px] -z-20 pointer-events-none" />
     </section>
   );
 }

@@ -47,7 +47,7 @@ export default function Experience() {
 
             {/* Content Card */}
             <div className={`w-full md:w-[45%] ${index % 2 === 0 ? "md:pl-0" : "md:pr-0"}`}>
-              <div className="glass shine-effect p-6 sm:p-12 rounded-[2rem] sm:rounded-[3.5rem] group relative overflow-hidden border border-[#9FCB98]/30 hover:border-[#346739]/30 transition-all duration-500 bg-white/40 dark:bg-[#1A1F24]/40 soft-glow">
+              <div className="glass shine-effect p-6 sm:p-12 rounded-[2rem] sm:rounded-[3.5rem] group relative overflow-hidden border border-[#9FCB98]/40 bg-white/40 hover:border-[#346739]/40 hover:bg-white/60 transition-all duration-500 soft-glow">
                 <div className="absolute top-0 right-0 p-4 sm:p-8 opacity-5 group-hover:opacity-10 transition-opacity text-[#346739]">
                   <Briefcase size={80} strokeWidth={1} />
                 </div>
@@ -57,15 +57,15 @@ export default function Experience() {
                   <span>{item.date}</span>
                 </div>
 
-                <h3 className="text-3xl font-display font-black mb-3 group-hover:text-[#346739] transition-colors leading-[1.1] uppercase tracking-tighter">{item.title}</h3>
-                <p className="text-black font-bold mb-8 text-[11px] flex items-center gap-2 uppercase tracking-widest">
+                <h3 className="text-3xl font-display font-black mb-3 text-[#346739] group-hover:text-[#346739]/80 transition-colors leading-[1.1] uppercase tracking-tighter">{item.title}</h3>
+                <p className="text-[#346739]/80 font-bold mb-8 text-[11px] flex items-center gap-2 uppercase tracking-widest">
                   <span className="w-4 h-[1px] bg-[#346739]" />
                   {item.organization}
                 </p>
 
                 <ul className="space-y-4">
                   {item.details.map((detail, idx) => (
-                    <li key={idx} className="flex gap-4 text-sm text-black transition-colors">
+                    <li key={idx} className="flex gap-4 text-sm text-[#346739] transition-colors">
                       <ChevronRight size={18} className="text-[#346739] shrink-0 mt-0.5" />
                       <span className="font-medium leading-relaxed">{detail}</span>
                     </li>

@@ -3,8 +3,8 @@
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
 
   --color-primary: #346739; /* Deep Green */
   --color-secondary: #79AE6F; /* Medium Green */
@@ -52,13 +52,7 @@
   }
 
   .gradient-text {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#346739] via-[#79AE6F] to-[#346739] inline-block pr-6;
-  }
-
-  .animate-gradient-border {
-    background: linear-gradient(var(--angle), #346739, #79AE6F, #F2EDC2, #346739);
-    background-size: 300% 300%;
-    animation: gradient-border 6s linear infinite;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#346739] via-[#79AE6F] to-[#346739] inline-block pr-2;
   }
 
   /* Soft Shine Sweep Effect */
@@ -68,25 +62,13 @@
   .shine-effect::before {
     content: "";
     @apply absolute top-0 -left-full w-full h-full;
-    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.15), transparent);
     transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 10;
     pointer-events: none;
   }
   .shine-effect:hover::before {
     transform: translateX(200%);
-  }
-
-  @property --angle {
-    syntax: '<angle>';
-    initial-value: 0deg;
-    inherits: false;
-  }
-
-  @keyframes gradient-border {
-    to {
-      --angle: 360deg;
-    }
   }
 
   .pulse-text {

@@ -46,7 +46,7 @@ function TiltCard({ project }: { project: any, key?: string }) {
         rotateX: showDetails ? 0 : rotateX,
         transformStyle: "preserve-3d",
       }}
-      className={`relative ${showDetails ? "h-auto min-h-[480px] sm:min-h-[500px]" : "h-auto min-h-[450px] md:h-[500px]"} w-full p-[1px] group transition-all duration-500`}
+      className={`relative ${showDetails ? "h-auto min-h-[500px]" : "h-auto min-h-[520px]"} w-full p-[1px] group transition-all duration-500`}
     >
       <motion.div
         layout
@@ -62,10 +62,8 @@ function TiltCard({ project }: { project: any, key?: string }) {
               className="h-full flex flex-col justify-between relative"
               style={{ transform: "translateZ(30px)" }}
             >
-              {/* Image background removed */}
-
               <div className="relative z-10">
-                <div className="flex items-center gap-3 mb-4 sm:mb-8">
+                <div className="flex items-center gap-3 mb-4 sm:mb-6">
                   <div className="p-2 sm:p-3 rounded-2xl bg-[#346739]/10 text-[#346739] border border-[#346739]/20">
                     <BrainCircuit size={24} className="sm:w-7 sm:h-7" strokeWidth={1.5} />
                   </div>
@@ -85,13 +83,25 @@ function TiltCard({ project }: { project: any, key?: string }) {
                   {project.title}
                 </motion.h3>
 
-                <p className="text-black font-display font-medium mb-4 sm:mb-8 line-clamp-4 uppercase tracking-tight text-[11px] sm:text-[12px] leading-relaxed">
-                  {project.aim}
-                </p>
+                {/* Problem, Solution, Result Stack */}
+                <div className="space-y-3.5 my-5 sm:my-6 text-left">
+                  <div className="text-[11px] sm:text-xs">
+                    <span className="font-mono font-black text-[#346739] uppercase tracking-wider mr-1.5">Problem:</span>
+                    <span className="text-[#346739]/80 font-medium">{project.problem}</span>
+                  </div>
+                  <div className="text-[11px] sm:text-xs">
+                    <span className="font-mono font-black text-[#79AE6F] uppercase tracking-wider mr-1.5">Solution:</span>
+                    <span className="text-[#346739]/80 font-medium">{project.solution}</span>
+                  </div>
+                  <div className="text-[11px] sm:text-xs p-2.5 sm:p-3 rounded-xl bg-[#9FCB98]/10 border border-[#9FCB98]/20">
+                    <span className="font-mono font-black text-[#346739] uppercase tracking-wider mr-1.5">Result:</span>
+                    <span className="text-[#346739] font-semibold">{project.result}</span>
+                  </div>
+                </div>
 
                 <div className="flex flex-wrap gap-1.5 sm:gap-2">
                   {project.techStack.map((tech: string) => (
-                    <span key={tech} className="px-2.5 py-0.5 sm:px-3 sm:py-1 bg-[#9FCB98]/10 border border-[#9FCB98]/20 rounded-lg text-[9px] sm:text-[10px] font-mono font-bold uppercase tracking-wider text-black">
+                    <span key={tech} className="px-2.5 py-0.5 sm:px-3 sm:py-1 bg-[#9FCB98]/10 border border-[#9FCB98]/20 rounded-lg text-[9px] sm:text-[10px] font-mono font-bold uppercase tracking-wider text-[#346739]">
                       {tech}
                     </span>
                   ))}
@@ -100,11 +110,15 @@ function TiltCard({ project }: { project: any, key?: string }) {
 
               <div className="relative z-10 pt-4 sm:pt-6">
                 <div className="flex items-center justify-between">
-                  <div className="flex gap-4">
-                    <a href={project.github} target="_blank" rel="noopener" className="p-2.5 sm:p-3.5 rounded-2xl glass bg-white/50 border-[#9FCB98]/40 text-[#346739] hover:bg-[#346739] hover:text-white transition-all duration-300 soft-glow hover-trigger">
-                      <Github size={18} className="sm:w-5 sm:h-5" />
-                    </a>
-                  </div>
+                  <a 
+                    href={project.github} 
+                    target="_blank" 
+                    rel="noopener" 
+                    className="flex items-center gap-2 px-4 py-2 rounded-xl text-[10px] font-black uppercase tracking-wider bg-[#346739] text-white hover:bg-[#346739]/80 transition-all duration-300 soft-glow hover-trigger"
+                  >
+                    <Github size={14} />
+                    Live Demo / Code
+                  </a>
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
@@ -127,20 +141,18 @@ function TiltCard({ project }: { project: any, key?: string }) {
               <div className="flex items-center justify-between mb-6 sm:mb-10">
                 <h3 className="text-xl sm:text-2xl md:text-3xl font-display font-black text-[#346739] tracking-tighter uppercase">{project.title}</h3>
                 <button onClick={() => setShowDetails(false)} className="p-1.5 hover:bg-[#346739]/10 rounded-full transition-colors group hover-trigger">
-                  <X size={20} className="text-slate-400 group-hover:text-[#346739]" />
+                  <X size={20} className="text-[#346739] group-hover:text-[#346739]" />
                 </button>
               </div>
 
               <div className="space-y-8 sm:space-y-12">
-                {/* Carousel section removed */}
-
                 <section>
                   <h4 className="text-[9px] sm:text-[10px] font-mono font-black uppercase tracking-[0.3em] text-[#346739] mb-3 sm:mb-4 flex items-center gap-2">
                     <Sparkles size={12} className="text-[#346739] sm:w-3.5 sm:h-3.5" />
                     TECHNICAL ARCHITECTURE
                   </h4>
-                  <p className="text-xs sm:text-sm text-black font-display font-medium leading-relaxed">
-                    {project.idea}
+                  <p className="text-xs sm:text-sm text-[#346739]/85 font-display font-medium leading-relaxed">
+                    {project.aim}
                   </p>
                 </section>
 
@@ -151,11 +163,11 @@ function TiltCard({ project }: { project: any, key?: string }) {
                   </h4>
                   <div className="grid grid-cols-1 gap-3 sm:gap-4">
                     {project.working.map((step: string, i: number) => (
-                      <div key={i} className="flex items-start gap-4 sm:gap-5 p-4 sm:p-6 rounded-[1.5rem] sm:rounded-[2rem] glass bg-[#F2EDC2]/10 border-[#9FCB98]/20 transition-all group/item">
+                      <div key={i} className="flex items-start gap-4 sm:gap-5 p-4 sm:p-6 rounded-[1.5rem] sm:rounded-[2rem] glass bg-[#F2EDC2]/10 border border-[#9FCB98]/20 transition-all group/item">
                         <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-2xl bg-[#346739]/10 flex items-center justify-center text-[#346739] shrink-0 group-hover/item:scale-110 transition-transform">
                           <span className="text-[9px] sm:text-[10px] font-mono font-black">{i + 1}</span>
                         </div>
-                        <span className="text-xs sm:text-sm font-display font-medium text-black leading-snug">{step}</span>
+                        <span className="text-xs sm:text-sm font-display font-medium text-[#346739] leading-snug">{step}</span>
                       </div>
                     ))}
                   </div>
@@ -185,7 +197,7 @@ export default function Projects() {
           >
             Digital <span className="gradient-text filter drop-shadow-[0_8px_30px_rgba(52,103,57,0.2)]">Assets</span>
           </motion.h2>
-          <p className="text-lg sm:text-xl text-black font-medium leading-relaxed uppercase tracking-tight relative z-[60] px-4 sm:px-12">
+          <p className="text-lg sm:text-xl text-[#346739] font-medium leading-relaxed uppercase tracking-tight relative z-[60] px-4 sm:px-12">
             Curated selection of intelligent platforms and analytical models.
           </p>
         </div>
